@@ -87,7 +87,7 @@ class Upload
 		$config['langCallback'] = '\\Upload::lang_callback';
 
 		// get an upload instance
-		static::$upload = new \FuelPHP\Upload\Upload($config);
+		static::$upload = new \Fuel\Upload\Upload($config);
 
 		// and load the uploaded files
 		static::$upload->processFiles();
