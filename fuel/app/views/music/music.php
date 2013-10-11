@@ -17,6 +17,7 @@ sound["4"] = "house";
 sound["5"] = "画竜点睛";
 
 
+
 var loadJPlayer=function(){
 
 var mu = random();
