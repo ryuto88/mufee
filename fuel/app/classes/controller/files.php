@@ -11,9 +11,9 @@ class Controller_Files extends Controller{
         
         // 初期設定
         $config = array(
-            'path' => DOCROOT . 'files',
+            'path' => DOCROOT . 'file',
             'randomize' => true,
-            'ext_whitelist' => array('img', 'jpg', 'jpeg', 'gif', 'png'),
+            'ext_whitelist' => array('mp3'),
         );
         
         // cofigを適用
