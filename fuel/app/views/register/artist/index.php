@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>ユーザー登録</title>
+	<title>アーティスト登録</title>
 	<?php echo Asset::css('bootstrap.css'); ?>
 </head>
 <body>
@@ -15,7 +15,7 @@
 		<div class="hero-unit">
                     <form action="confirm" method="post">
                         <table class="table">
-                            <caption>ユーザー登録</caption>
+                            <caption>アーティスト登録</caption>
                             <tr>
                                 <th>ユーザー名</th>
                                 <td><input type="textbox" name="name"></td>
