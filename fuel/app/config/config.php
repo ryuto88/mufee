@@ -257,8 +257,10 @@ return array(
 	/**************************************************************************/
 	/* Always Load                                                            */
 	/**************************************************************************/
-	// 'always_load'  => array(
-
+	 'always_load'  => array(
+             'packages' => array(
+                    'orm',
+            ),
 		/**
 		 * These packages are loaded on Fuel's startup.
 		 * You can specify them in the following manner:
@@ -308,6 +310,6 @@ return array(
 		 * If you don't want the lang in a group use null as groupname.
 		 */
 		// 'language'  => array(),
-	// ),
+	),
 
 );

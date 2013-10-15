@@ -13,7 +13,10 @@
     追加
  *
  */
-
+#header .row{
+    width: 940px;
+    margin: 0 auto;
+}
 #logo{
     display: block;
     background-image: url("../img/logo.png");
@@ -27,6 +30,25 @@
     height: 135px;
     width: 100%;
     margin-bottom: 40px;
+}
+
+#btn-group{
+    text-align: center;
+}
+.btn-group-left{
+    width: 100px;
+}
+.btn-group-right{
+    width: 100px;
+    margin-left: 50px;
+}
+
+table caption{
+    margin-bottom: 5px;
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: inherit;
 }
 
 /*
