@@ -11,9 +11,9 @@ class Controller_Files extends Controller{
         
         // 初期設定
         $config = array(
-            'path' => DOCROOT . 'files',
+            'path' => DOCROOT . 'uploadfiles',
             'randomize' => true,
-            'ext_whitelist' => array('img', 'jpg', 'jpeg', 'gif', 'png'),
+            'ext_whitelist' => array('mp3'),
         );
         
         // cofigを適用
@@ -36,8 +36,24 @@ class Controller_Files extends Controller{
             
             return;
         }
- 
-		return View::forge('files/upload');
+        
+        foreach(Upload::get_files() as $file){
+        //ファイル情報を使用した処理
+         
+            if (Input::method() == 'POST')
+            {  
+                //モデルに保存したファイル名とファイルパスを渡す
+                $val = Model_Files::validate($file['saved_as'],$file['saved_to']);
+
+                return Response::forge(View::forge('files/upload'));
+            }
+            else 
+            {
+                return Response::forge(View::forge('files/index'));
+            }
+               
+            
+            }
 	}
     }
     

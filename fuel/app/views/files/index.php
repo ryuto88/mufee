@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <form action="upload" method="post" enctype="multipart/form-data">
     <p>アップロードファイルを選択</p>
     <input type="file" name="upload_file"><br />
