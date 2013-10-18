@@ -6,14 +6,14 @@
  'content',
  );
  //テーブル名がモデル名の複数形なら省略可
- protected static $_table_name = 'sample';
- public static function validate($filename,$filepath)
+ protected static $_table_name = 'musictable';
+ public static function validate($filename,$filepath,$genre)
  {
  $columns=array('title','content');
  $values=array('title' => $filename,
                'content' => $filepath,
      );
- $query=DB::insert('sample')->columns($columns)->values($values)->execute();
+ $query=DB::insert('musictable')->columns($columns)->values($values)->execute();
  
  }
  }

@@ -1,13 +1,23 @@
 <?php
 
-class Controller_Files extends Controller{
-    
-    public function action_index()
-    {
-        return View::forge('files/index');
+class Controller_MusicTable extends Controller{
+    public function action_index(){
+        return View::forge('musictable/index');
     }
     
-    public function action_upload(){
+    
+     public function action_exe(){
+            $insert = Model_User::forge()->set(array(
+                            'genre' => INPUT::post("genre"),
+                            'email' => INPUT::post("email"),
+                            'password' => INPUT::post("password"),
+                        )
+                    );
+            $insert->save();
+            
+            return View::forge('register/artist/index');
+     }
+     public function action_upload(){
         
         // 初期設定
         $config = array(
@@ -27,7 +37,7 @@ class Controller_Files extends Controller{
         }
         else
         {
-            return  View::forge('files/index');
+            return  View::forge('musictable/index');
  
             // error処理
             $html_error = '';
@@ -50,13 +60,12 @@ class Controller_Files extends Controller{
             }
             else 
             {
-                return Response::forge(View::forge('files/index'));
+                return Response::forge(View::forge('musictable/index'));
             }
                
             
             }
 	}
-    }
-    
+}
 
 ?>
