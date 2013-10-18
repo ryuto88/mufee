@@ -3,10 +3,9 @@ class Controller_Insert extends Controller
 {
 
  
-public function action_index($file){
+public function action_index(){
  //もしPOST送信されたら
- echo "asdf";
- exit;
+
  if (Input::method() == 'POST')
  {
     $val = Model_Insert::validate('insert');

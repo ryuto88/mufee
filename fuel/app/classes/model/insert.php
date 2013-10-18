@@ -9,6 +9,8 @@
  protected static $_table_name = 'sample';
  public static function validate($factory)
  {
+     echo $factory;
+     exit;
  $columns=array('title','content');
  $values=array('title' => Input::post('title'),
     'content' => Input::post('content'),

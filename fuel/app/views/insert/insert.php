@@ -4,7 +4,8 @@ and open the template in the editor.
 -->
 <?php
 //var_dump($test); 
-//exit;?>
+//exit;
+?>
 <!DOCTYPE html>
 <html>
     <head>
